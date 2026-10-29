@@ -26,10 +26,7 @@ The pairwise network is generated as an Erdős–Rényi random graph. The higher
 
 The phase $$\theta_i$$ of oscillator $$i$$ evolves according to a Kuramoto-type model with pairwise and higher-order coupling:
 
-$$
-\frac{d\theta_i}{dt}
-=
-\omega_i
+$$\frac{d\theta_i}{dt}=\omega_i
 +\lambda_1 s_i^p\sum_j A_{ij}
 \sin(\theta_j-\theta_i)
 +\lambda_2 s_i^h\sum_{j,k}B_{ijk}
@@ -44,7 +41,7 @@ Here, $$\omega_i$$ is the natural frequency, $$\lambda_1$$ and $$\lambda_2$$ are
 
 Each oscillator maintains separate strategies for pairwise and higher-order interactions. The two strategies can evolve independently, enabling the population to exhibit different levels of cooperation in the two channels.
 
-The payoff associated with interaction channel \(q\), where \(q\in\{p,h\}\), is written as
+The payoff associated with interaction channel $$q$$, where $$q\in\{p,h\}$$, is written as
 
 $$
 \Pi_i^q=r_i^q-\frac{\alpha c_i^q}{2\pi}.
@@ -54,9 +51,7 @@ Here, $$r_i^q$$ represents the synchronization-related benefit, $$c_i^q$$ repres
 
 Strategy updates use a Fermi-type rule:
 
-$$
-P(i\leftarrow j)
-=
+$$P(i\leftarrow j)=
 \frac{1}{1+\exp[-\beta(\Pi_j^q-\Pi_i^q)]},
 $$
 
@@ -70,9 +65,7 @@ The exact definitions of $$r_i^q$$, $$c_i^q$$, and the update procedure should b
 
 Collective phase synchronization is measured by the Kuramoto order parameter:
 
-$$
-R(t)=\left|\frac{1}{N}\sum_{j=1}^{N}e^{i\theta_j(t)}\right|.
-$$
+$$R(t)=\left|\frac{1}{N}\sum_{j=1}^{N}e^{i\theta_j(t)}\right|.$$
 
 Values of $$R$$ close to zero indicate a largely incoherent state, whereas values close to one indicate strong phase synchronization.
 
@@ -80,9 +73,7 @@ Values of $$R$$ close to zero indicate a largely incoherent state, whereas value
 
 The cooperation levels in the pairwise and higher-order channels can be measured by the fractions of cooperative strategies:
 
-$$
-\rho_p=\frac{1}{N}\sum_{i=1}^{N}s_i^p,
-\qquad
+$$\rho_p=\frac{1}{N}\sum_{i=1}^{N}s_i^p,\qquad
 \rho_h=\frac{1}{N}\sum_{i=1}^{N}s_i^h,
 $$
 
