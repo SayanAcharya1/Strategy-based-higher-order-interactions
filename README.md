@@ -18,15 +18,15 @@ The main objectives are to understand:
 
 ### 1. Network structure
 
-The population consists of \(N\) phase oscillators. Pairwise interactions are encoded by an adjacency matrix \(A_{ij}\), and higher-order interactions are encoded by a tensor \(B_{ijk}\), representing three-oscillator interactions.
+The population consists of $$N$$ phase oscillators. Pairwise interactions are encoded by an adjacency matrix $$A_{ij}$$, and higher-order interactions are encoded by a tensor $$B_{ijk}$$, representing three-oscillator interactions.
 
 The pairwise network is generated as an Erdős–Rényi random graph. The higher-order structure is a random 3-uniform hypergraph.
 
 ### 2. Phase dynamics
 
-The phase \(\theta_i\) of oscillator \(i\) evolves according to a Kuramoto-type model with pairwise and higher-order coupling:
+The phase $$\theta_i$$ of oscillator $$i$$ evolves according to a Kuramoto-type model with pairwise and higher-order coupling:
 
-\[
+$$
 \frac{d\theta_i}{dt}
 =
 \omega_i
@@ -34,9 +34,9 @@ The phase \(\theta_i\) of oscillator \(i\) evolves according to a Kuramoto-type 
 \sin(\theta_j-\theta_i)
 +\lambda_2 s_i^h\sum_{j,k}B_{ijk}
 \sin(2\theta_j-\theta_k-\theta_i).
-\]
+$$
 
-Here, \(\omega_i\) is the natural frequency, \(\lambda_1\) and \(\lambda_2\) are the pairwise and higher-order coupling strengths, and \(s_i^p,s_i^h\) denote the strategies associated with the two interaction channels.
+Here, $$\omega_i$$ is the natural frequency, $$\lambda_1$$ and $$\lambda_2$$ are the pairwise and higher-order coupling strengths, and $$s_i^p,s_i^h$$ denote the strategies associated with the two interaction channels.
 
 **Note:** The precise normalization of the interaction sums, tensor convention, and strategy values should match the simulation code.
 
@@ -46,23 +46,23 @@ Each oscillator maintains separate strategies for pairwise and higher-order inte
 
 The payoff associated with interaction channel \(q\), where \(q\in\{p,h\}\), is written as
 
-\[
+$$
 \Pi_i^q=r_i^q-\frac{\alpha c_i^q}{2\pi}.
-\]
+$$
 
-Here, \(r_i^q\) represents the synchronization-related benefit, \(c_i^q\) represents the cost associated with the oscillator's dynamical adjustment, and \(\alpha\) controls the cost strength.
+Here, $$r_i^q$$ represents the synchronization-related benefit, $$c_i^q$$ represents the cost associated with the oscillator's dynamical adjustment, and $$\alpha$$ controls the cost strength.
 
 Strategy updates use a Fermi-type rule:
 
-\[
+$$
 P(i\leftarrow j)
 =
 \frac{1}{1+\exp[-\beta(\Pi_j^q-\Pi_i^q)]},
-\]
+$$
 
-where \(\beta\) controls the sensitivity of strategy adoption to payoff differences.
+where $$\beta$$ controls the sensitivity of strategy adoption to payoff differences.
 
-The exact definitions of \(r_i^q\), \(c_i^q\), and the update procedure should be read together with the implementation.
+The exact definitions of $$r_i^q$$, $$c_i^q$$, and the update procedure should be read together with the implementation.
 
 ## Observables
 
@@ -70,21 +70,21 @@ The exact definitions of \(r_i^q\), \(c_i^q\), and the update procedure should b
 
 Collective phase synchronization is measured by the Kuramoto order parameter:
 
-\[
+$$
 R(t)=\left|\frac{1}{N}\sum_{j=1}^{N}e^{i\theta_j(t)}\right|.
-\]
+$$
 
-Values of \(R\) close to zero indicate a largely incoherent state, whereas values close to one indicate strong phase synchronization.
+Values of $$R$$ close to zero indicate a largely incoherent state, whereas values close to one indicate strong phase synchronization.
 
 ### Cooperation
 
 The cooperation levels in the pairwise and higher-order channels can be measured by the fractions of cooperative strategies:
 
-\[
+$$
 \rho_p=\frac{1}{N}\sum_{i=1}^{N}s_i^p,
 \qquad
 \rho_h=\frac{1}{N}\sum_{i=1}^{N}s_i^h,
-\]
+$$
 
 provided the strategy variables are encoded as zero or one, with one representing cooperation.
 
@@ -107,10 +107,10 @@ The parameter values used in the study include the following explored ranges:
 | Parameter | Values or range |
 |---|---|
 | Pairwise mean degree | 12 |
-| Higher-order connectivity | \(h=0,6,8,12\) |
-| Pairwise coupling | \(\lambda_1=0,1,5,10,15,25\) where specified in the parameter sweep |
-| Cost strength | \(\alpha=10^{-3.5},10^{-2},10^{-1.5}\) |
-| Fermi selection intensity | \(\beta=1\) |
+| Higher-order connectivity | $$h=0,6,8,12$$ |
+| Pairwise coupling | $$\lambda_1=0,1,5,10,15,25$$ where specified in the parameter sweep |
+| Cost strength | $$\alpha=10^{-3.5},10^{-2},10^{-1.5}$$ |
+| Fermi selection intensity | $$\beta=1$$ |
 
 The exact meaning of each parameter and the applicable parameter combinations should be verified against the simulation scripts. Other numerical settings, including population size, integration time step, transient duration, number of realizations, and random seeds, should be documented for reproducibility.
 
