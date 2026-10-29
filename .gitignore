@@ -1,0 +1,16 @@
+# Julia temporary files
+Manifest.local.toml
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary output and logs
+*.log
+nohup.out
+
+# Generated simulation data (uncomment if you do not want to upload these)
+# results/
+# output/
