@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as described below."
+type: software
+title: "Strategy-based-higher-order-interactions"
+authors:
+  - family-names: Acharya
+    given-names: Sayan
+repository-code: "https://github.com/SayanAcharya1/Strategy-based-higher-order-interactions"
+abstract: "Simulation code for studying the coevolution of cooperation and synchronization in coupled oscillators with pairwise and higher-order interactions."
