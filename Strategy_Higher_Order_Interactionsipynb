@@ -61,10 +61,10 @@
     "transient_steps(p::Params)  = Int(round(p.trans_frac * p.T / p.dt))\n",
     "\n",
     "# ---- QUICK TEST (minutes) ----\n",
-    "P = Params(N = 100, T = 100.0, n_real = 3)\n",
+    "#P = Params(N = 100, T = 100.0, n_real = 3)\n",
     "\n",
     "# ---- FULL RUN (very slow in serial) ----\n",
-    "# P = Params()   # N=1000, T=1000, dt=0.01, n_real=50, λ2=5, α=10^-3.5"
+    " P = Params()   # N=1000, T=1000, dt=0.01, n_real=50, λ2=5, α=10^-3.5"
    ]
   },
   {
