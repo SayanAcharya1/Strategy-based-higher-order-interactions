@@ -24,9 +24,7 @@ In particular, the simulations explore how higher-order cooperation can persist 
 
 The oscillator dynamics are governed by
 
-$$
-\frac{d\theta_i}{dt}
-=
+$$\frac{d\theta_i}{dt} =
 \omega_i
 +\lambda_1 s_i^p\sum_j A_{ij}
 \sin(\theta_j-\theta_i)
