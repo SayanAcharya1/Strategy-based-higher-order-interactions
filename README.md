@@ -7,7 +7,6 @@ Codes for numerical simulations in the work:
 
 **“Coevolution of Synchronization and Cooperation with Pairwise and Higher-Order Interactions.”**
 
----
 
 ## Description
 
@@ -19,13 +18,13 @@ The model investigates how cooperation evolves independently across pairwise and
 
 In particular, the simulations explore how higher-order cooperation can persist even when pairwise cooperation declines, and how group interactions can sustain collective synchronization over a broader range of pairwise coupling strengths, including under repulsive pairwise coupling.
 
----
+
 
 ## Model
 
 The oscillator dynamics are governed by
 
-\[
+$$
 \frac{d\theta_i}{dt}
 =
 \omega_i
@@ -33,9 +32,9 @@ The oscillator dynamics are governed by
 \sin(\theta_j-\theta_i)
 +\lambda_2s_i^h\sum_{j,k}B_{ijk}
 \sin(2\theta_j-\theta_k-\theta_i).
-\]
+$$
 
-Here, \(A_{ij}\) represents pairwise network connections, \(B_{ijk}\) represents higher-order interactions, and \(s_i^p\) and \(s_i^h\) denote the pairwise and higher-order strategies, respectively.
+Here, $$A_{ij}$$ represents pairwise network connections, $$B_{ijk}$$ represents higher-order interactions, and $$s_i^p$$ and $$s_i^h$$ denote the pairwise and higher-order strategies, respectively.
 
 Cooperation evolves through payoff-based strategy updates with a cost associated with dynamical adjustment.
 
@@ -52,7 +51,7 @@ The repository will contain:
 
 The exact filenames and descriptions will be updated as the simulation codes are uploaded.
 
----
+
 
 ## Requirements
 
@@ -62,7 +61,6 @@ The exact filenames and descriptions will be updated as the simulation codes are
 
 The exact package dependencies and Julia version will be specified alongside the simulation codes.
 
----
 
 ## Author
 
@@ -71,7 +69,6 @@ Senior Research Fellow (SRF)
 Physics and Applied Mathematics Unit (PAMU)  
 Indian Statistical Institute, Kolkata, India
 
----
 
 ## Citation
 
