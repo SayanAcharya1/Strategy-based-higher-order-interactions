@@ -1,4 +1,4 @@
-# strategy-based-higher-order-interactions
+# Strategy-based-higher-order-interactions
 
 **Project home:**  
 https://github.com/SayanAcharya1/Strategy-based-higher-order-interactions
